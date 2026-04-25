@@ -59,29 +59,31 @@ export default function CheckForm({ draw, initialTicket = '', onResult }: CheckF
           maxLength={6}
           value={ticket}
           onChange={handleChange}
-          placeholder="เช่น 123456"
+          placeholder="กรอกหมายเลข 6 หลัก"
           aria-label="หมายเลขสลาก"
           aria-required="true"
           className={[
-            'h-12 w-full rounded-lg border-2 bg-surface-2 px-md text-center text-base tracking-widest',
-            'font-sans text-text placeholder:text-text-muted',
-            'transition-colors duration-150',
+            'h-14 w-full rounded-xl border-2 bg-white px-md text-center text-2xl tracking-[0.3em]',
+            'font-sans text-text placeholder:text-text-muted/60 placeholder:tracking-normal placeholder:text-base',
+            'transition-all duration-200',
             isReady || ticket.length === 0
-              ? 'border-border focus:border-gold focus-visible:ring-2 focus-visible:ring-gold/20'
-              : 'border-error',
+              ? 'border-border focus:border-lottery-green focus-visible:ring-2 focus-visible:ring-lottery-green/30 shadow-card'
+              : 'border-error/60',
             shaking ? 'animate-[shake_0.3s_ease-in-out]' : '',
           ].join(' ')}
         />
-        <p className="text-sm text-text-muted text-center">กรอกตัวเลข 6 หลัก</p>
       </div>
       <button
         type="submit"
         disabled={!isReady}
-        className="h-12 w-full rounded-lg bg-gold text-white text-base font-semibold
-          disabled:opacity-50 disabled:cursor-not-allowed
-          hover:enabled:brightness-95 active:enabled:brightness-90
-          transition-all duration-150
-          focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold/50"
+        className={[
+          'h-13 w-full rounded-xl text-white text-lg font-semibold',
+          'transition-all duration-200',
+          'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-lottery-green/50',
+          isReady
+            ? 'bg-lottery-green hover:bg-lottery-green-dark shadow-card-lg hover:shadow-lg'
+            : 'bg-lottery-green opacity-40 cursor-not-allowed',
+        ].join(' ')}
       >
         ตรวจสลาก
       </button>
