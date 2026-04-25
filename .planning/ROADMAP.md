@@ -27,6 +27,14 @@
 
 **Status:** Planning
 
+**Plans:** 4 plans (Wave 1: A+B parallel, Wave 2: C+D sequential)
+
+Plans:
+- [ ] 01-PLAN-A.md — Project scaffold: Next.js 15, Tailwind 4.x CSS-first, Sarabun font, globals.css @theme tokens, TypeScript types, Zod schemas
+- [ ] 01-PLAN-B.md — Data layer: matchPrizes() engine, LotteryDataSource abstraction, static fallback JSON, sanook.com scraper route, history.ts localStorage helpers
+- [ ] 01-PLAN-C.md — UI components: all 8 components (CheckForm, CheckResult, PrizeBadge, PrizeTable, DrawDateHeader, HistoryPanel, HistoryItem, ShareButton) + loading skeleton
+- [ ] 01-PLAN-D.md — Page assembly + Vercel deploy: page.tsx ISR, error.tsx, URL ?ticket= auto-check, production deployment
+
 ---
 
 ## Out of Scope (v2)
