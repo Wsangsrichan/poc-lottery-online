@@ -12,18 +12,26 @@
   --spacing-2xl: 48px;
   --spacing-3xl: 64px;
 
-  /* Brand colors */
-  --color-gold: #D4A017;
-  --color-gold-light: #F5E6B3;
+  /* Thai lottery brand colors */
+  --color-lottery-green: #006B3C;
+  --color-lottery-green-dark: #004D2A;
+  --color-lottery-green-light: #E6F4ED;
+  --color-lottery-red: #C8102E;
+  --color-lottery-red-light: #FDECEA;
 
-  /* Semantic aliases */
-  --color-win: #16A34A;
-  --color-error: #DC2626;
+  /* Semantic aliases — map onto the new palette */
+  --color-win: #006B3C;
+  --color-win-bg: #E6F4ED;
+  --color-error: #C8102E;
   --color-surface: #FFFFFF;
   --color-surface-2: #F5F5F5;
   --color-border: #E5E7EB;
   --color-text: #111827;
   --color-text-muted: #6B7280;
+
+  /* Shadows */
+  --shadow-card: 0 1px 3px rgb(0 0 0 / 0.06), 0 1px 2px rgb(0 0 0 / 0.04);
+  --shadow-card-lg: 0 4px 12px rgb(0 0 0 / 0.08), 0 2px 4px rgb(0 0 0 / 0.04);
 }
 
 * {
@@ -34,10 +42,26 @@ html {
   -webkit-text-size-adjust: 100%;
 }
 
+body {
+  background: #FFFFFF;
+  min-height: 100dvh;
+}
+
 @keyframes shake {
   0%, 100% { transform: translateX(0); }
   20%       { transform: translateX(-4px); }
   40%       { transform: translateX(4px); }
   60%       { transform: translateX(-4px); }
   80%       { transform: translateX(4px); }
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

@@ -25,19 +25,36 @@
 
 **Stack:** Next.js 15.x, React 19, TypeScript, Tailwind CSS 4.x, Vercel
 
-**Status:** Planning
+**Status:** Planning (REPLAN — replanning with user decisions from 01-CONTEXT.md)
 
-**Plans:** 4 plans (Wave 1: A+B parallel, Wave 2: C+D sequential)
+**Plans:** 3 plans (Wave 1: 01, Wave 2: 02+03 parallel)
 
 Plans:
-- [ ] 01-PLAN-A.md — Project scaffold: Next.js 15, Tailwind 4.x CSS-first, Sarabun font, globals.css @theme tokens, TypeScript types, Zod schemas
-- [ ] 01-PLAN-B.md — Data layer: matchPrizes() engine, LotteryDataSource abstraction, static fallback JSON, sanook.com scraper route, history.ts localStorage helpers
-- [ ] 01-PLAN-C.md — UI components: all 8 components (CheckForm, CheckResult, PrizeBadge, PrizeTable, DrawDateHeader, HistoryPanel, HistoryItem, ShareButton) + loading skeleton
-- [ ] 01-PLAN-D.md — Page assembly + Vercel deploy: page.tsx ISR, error.tsx, URL ?ticket= auto-check, production deployment
+- [ ] 01-01-PLAN.md — Color system: replace @theme tokens with Thai lottery green/red palette in globals.css
+- [ ] 01-02-PLAN.md — Layout & header: flat 640px column in page.tsx, compact date-only DrawDateHeader
+- [ ] 01-03-PLAN.md — Result & table: big green won state in CheckResult, muted not-won, รางวัลที่ 1 green highlight in PrizeTable
 
 ---
 
-## Out of Scope (v2)
+## Phase 2: Multi-Ticket Batch Check
+
+**Goal:** ผู้ใช้กรอกหมายเลขสลากหลายใบพร้อมกัน (paste จากกล้อง/สลากจริง) ระบบตรวจทีเดียว แสดงสรุปผลรวม (ถูกกี่ใบ ไม่ถูกกี่ใบ รางวัลรวมเท่าไร) พร้อมรายละเอียดแต่ละใบ
+
+**Depends on:** Phase 1 (complete)
+
+**Requirements:**
+- REQ-11: Input รองรับหลายหมายเลข — paste หลายบรรทัด, คั่นด้วย comma/space/newline, auto-extract 6 หลัก
+- REQ-12: แสดงสรุปผลรวม — จำนวนใบที่ถูก/ไม่ถูก, มูลค่ารางวัลรวม
+- REQ-13: แสดงรายละเอียดแต่ละใบ — เลข, รางวัลที่ถูก (ถ้ามี), สถานะถูก/ไม่ถูก
+- REQ-14: Camera/OCR integration — ถ่ายภาพสลากแล้ว auto-extract เลข (nice-to-have)
+
+**Stack:** Same as Phase 1 (Next.js 16, React 19, Tailwind 4.x)
+
+**Status:** Planning
+
+---
+
+## Out of Scope (v3)
 
 - User authentication
 - Buying lottery tickets

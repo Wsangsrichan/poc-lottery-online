@@ -43,29 +43,29 @@ export default function HistoryPanel({ onRecheck }: HistoryPanelProps) {
   const grouped = groupByDraw(history)
 
   return (
-    <section className="w-full px-md">
+    <section className="w-full">
       <button
         type="button"
         onClick={() => setIsOpen((v) => !v)}
         className="flex items-center justify-between w-full text-left py-sm min-h-[44px]"
         aria-expanded={isOpen}
       >
-        <h2 className="text-xl font-semibold text-text">ประวัติการตรวจ</h2>
-        <span className="text-text-muted text-sm">{isOpen ? '▲' : '▼'}</span>
+        <h2 className="text-lg font-semibold text-text">ประวัติการตรวจ</h2>
+        <span className={`text-text-muted text-sm transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`}>▼</span>
       </button>
 
       {isOpen && (
-        <div className="mt-sm">
+        <div className="mt-sm animate-[fade-in-up_0.2s_ease-out]">
           {history.length === 0 ? (
             <div className="text-center py-lg">
               <p className="text-base font-semibold text-text">ยังไม่มีประวัติการตรวจ</p>
               <p className="text-sm text-text-muted mt-xs">ตรวจสลากแล้ว ประวัติจะปรากฏที่นี่</p>
             </div>
           ) : (
-            <div className="rounded-lg border border-border overflow-hidden">
+            <div className="rounded-xl border border-border overflow-hidden shadow-card">
               {Array.from(grouped.entries()).map(([drawDate, entries]) => (
                 <div key={drawDate}>
-                  <p className="text-sm text-text-muted px-md py-xs bg-surface-2 border-b border-border">
+                  <p className="text-xs font-semibold text-text-muted px-md py-xs bg-warm-gray border-b border-border uppercase tracking-wide">
                     งวด {drawDate}
                   </p>
                   {entries.map((entry) => (

@@ -4,10 +4,10 @@ interface DrawDateHeaderProps {
 
 export default function DrawDateHeader({ drawDateThai }: DrawDateHeaderProps) {
   return (
-    <div className="text-center py-3">
-      <p className="text-base text-text-muted font-sans">
+    <header className="text-center py-sm px-md mb-sm">
+      <p className="text-sm text-text-muted">
         งวดประจำวันที่ <span className="font-semibold text-text">{drawDateThai}</span>
       </p>
-    </div>
+    </header>
   )
 }

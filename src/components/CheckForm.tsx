@@ -54,8 +54,12 @@ export default function CheckForm({ draw, initialTicket = '', onResult }: CheckF
       <div className="flex flex-col gap-xs">
         <input
           ref={inputRef}
-          type="tel"
+          type="text"
           inputMode="numeric"
+          pattern="[0-9]*"
+          name="ticket"
+          autoComplete="off"
+          enterKeyHint="search"
           maxLength={6}
           value={ticket}
           onChange={handleChange}

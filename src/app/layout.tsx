@@ -17,7 +17,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="th" className={sarabun.variable}>
-      <body className="font-sans bg-white text-gray-900 antialiased">
+      <body className="font-sans text-gray-900 antialiased">
         {children}
       </body>
     </html>

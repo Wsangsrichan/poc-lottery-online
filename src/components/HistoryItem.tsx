@@ -13,8 +13,8 @@ export default function HistoryItem({ entry, onRecheck }: HistoryItemProps) {
     <button
       type="button"
       onClick={() => onRecheck(entry.ticket)}
-      className="flex items-center justify-between w-full min-h-[44px] px-md border-b border-gray-100
-        hover:bg-surface-2 transition-colors duration-100 text-left cursor-pointer"
+      className="flex items-center justify-between w-full min-h-[44px] px-md py-2 border-b border-gray-50
+        hover:bg-gold-light/20 transition-colors duration-100 text-left cursor-pointer"
       aria-label={`ตรวจหมายเลข ${entry.ticket} อีกครั้ง`}
     >
       <span className="text-base font-mono tracking-widest text-text">{entry.ticket}</span>

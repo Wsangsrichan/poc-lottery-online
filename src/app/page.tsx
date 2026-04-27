@@ -17,11 +17,9 @@ export default async function Page({ searchParams }: PageProps) {
   const draw = await fetchLotteryData()
 
   return (
-    <main className="max-w-2xl mx-auto py-lg pb-3xl">
+    <main className="max-w-[640px] mx-auto py-sm pb-3xl px-sm">
       <DrawDateHeader drawDateThai={draw.drawDateThai} />
-
       <LotteryPageClient draw={draw} initialTicket={initialTicket} />
-
       <section className="mt-2xl">
         <PrizeTable draw={draw} />
       </section>

@@ -48,9 +48,7 @@ export default function LotteryPageClient({ draw, initialTicket }: LotteryPageCl
       />
 
       {checkedTicket !== null && (
-        <div className="px-md">
-          <CheckResult ticket={checkedTicket} matches={matches} />
-        </div>
+        <CheckResult ticket={checkedTicket} matches={matches} />
       )}
 
       <div className="mt-sm">

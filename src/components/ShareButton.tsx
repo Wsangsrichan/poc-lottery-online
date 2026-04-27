@@ -42,10 +42,10 @@ export default function ShareButton({ ticket, won }: ShareButtonProps) {
       <button
         type="button"
         onClick={handleShare}
-        className="h-11 w-full rounded-lg border border-border bg-surface text-gray-700
-          text-base font-normal px-md
-          hover:bg-surface-2 active:brightness-95
-          transition-colors duration-150
+        className="h-11 w-full rounded-xl border border-border bg-white text-gray-700
+          text-base font-normal px-md shadow-sm
+          hover:bg-surface-2 hover:shadow-card active:brightness-95
+          transition-all duration-150
           focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold/50"
         aria-label="แชร์ผลลัพธ์"
       >
@@ -58,7 +58,7 @@ export default function ShareButton({ ticket, won }: ShareButtonProps) {
           aria-live="polite"
           className="fixed bottom-8 left-1/2 -translate-x-1/2 z-50
             bg-gray-900 text-white text-sm rounded-full px-4 py-2
-            pointer-events-none"
+            shadow-lg pointer-events-none"
         >
           คัดลอกลิงก์แล้ว
         </div>
