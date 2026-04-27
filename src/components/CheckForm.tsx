@@ -48,7 +48,7 @@ export default function CheckForm({ draw, initialTicket = '', onResult }: CheckF
   return (
     <form
       onSubmit={handleSubmit}
-      className="flex flex-col gap-sm w-full max-w-sm mx-auto px-md"
+      className="flex flex-col gap-sm w-full max-w-xs mx-auto"
       noValidate
     >
       <div className="flex flex-col gap-xs">
@@ -67,7 +67,7 @@ export default function CheckForm({ draw, initialTicket = '', onResult }: CheckF
           aria-label="หมายเลขสลาก"
           aria-required="true"
           className={[
-            'h-14 w-full rounded-xl border-2 bg-white px-md text-center text-2xl tracking-[0.3em]',
+            'h-16 w-full rounded-xl border-2 bg-white px-5 text-center text-3xl tracking-[0.5em]',
             'font-sans text-text placeholder:text-text-muted/60 placeholder:tracking-normal placeholder:text-base',
             'transition-all duration-200',
             isReady || ticket.length === 0
